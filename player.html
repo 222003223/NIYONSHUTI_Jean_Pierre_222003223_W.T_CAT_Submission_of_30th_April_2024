@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---NIYONSHUTI Jean Pierre 222003223--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up of player</title>
+    <!----Add your CSS styles here --->
+      <link rel="stylesheet" href="css/style2.css">
+          <script type="text/javascript" src="javascript/updatejs.js"></script>
+    <script type="text/javascript" src="javascript/deletejs.js"></script>
+    <script type="text/javascript" src="javascript/readjs.js"></script>
+    <script type="text/javascript" src="javascript/insertjs.js"></script>
+     <style>
+    body {
+      background-image: url('image/T.jpg');
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Prevent the background image from repeating */
+    }
+  </style>
+</head>
+<body>
+<header style="font: Arial Rounded  MT Bold; font-size: 20;">
+    <div style="display: flex; align-items: center;">
+    <div>  <img src="./image/pierre.jpeg" width="100" height="80" alt="Logo">
+        Jean Pierre NIYONSHUTI
+        <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+    </div></div>
+    <hr>
+<main style="color:grey;">
+    <center>
+ <section">
+     <form action="landingplayer.php" method="post">
+         <h1>PLAYER REGISTRATION FORM</h1>
+<body>
+    <form method="post" action="landingplayer.php">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="first_name" required><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="last_name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br>
+        <label for="position">Position:</label>
+        <select name="position">
+            <option value="goalkeeper">Goalkeeper</option>
+            <option value="forward">Forward</option>
+            <option value="defence">Defence</option>
+            <option value="mediatar">Mediatar</option>
+            <option value="centeralforword">Centeral Forward</option>
+        </select><br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+        <label for="club_id">Club ID:</label>
+        <input type="text" id="club_id" name="club_id" required><br>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required><br>
+        <button type="submit" name="create">CREATE</button>
+    </form></section></center></main>
+</hr>
+</body></html>

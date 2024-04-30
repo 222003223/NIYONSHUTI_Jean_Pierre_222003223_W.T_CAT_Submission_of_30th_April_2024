@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank</title>
+</head>
+<!----niyonshuti jean pierre 2222003223 on 16th april 2024--->
+<body>
+     <link rel="stylesheet" href="css/style2.css">
+     <script type="text/javascript" src="javascript/updatejs.js"></script>
+    <script type="text/javascript" src="javascript/deletejs.js"></script>
+    <script type="text/javascript" src="javascript/readjs.js"></script>
+    <script type="text/javascript" src="javascript/insertjs.js"></script>
+</head>
+<header style="font: Arial Rounded  MT Bold; font-size: 20;">
+    <div style="display: flex; align-items: center;">
+    <div>  <img src="./image/p.png" width="100" height="80" alt="Logo">
+        Jean Pierre NIYONSHUTI
+        <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+    </div></div>
+    <hr>
+<main style="color:grey;">
+    <center>
+ <section">
+     <form action="landingclub.php" method="post">
+         <h1>CLUB REGISTRATION FORM</h1>
+    <!-- Create Form -->
+    <form method="post" action="landingbank.php">
+        <label>bank_id:</label><br>
+        <input type="text" name="bank_id"><br>
+         <label> Bank Name:</label><br>
+        <input type="text" name=" bank_name" required><br>
+        <label>Location:</label><br>
+        <input type="text" name="location" required><br>
+        <label>Website:</label><br>
+        <input type="text" name="website" required><br>
+        <label>Contact:</label><br>
+        <input type="text" name="contact" required><br>
+        <label>Bank Account:</label><br>
+        <input type="text" name="bank_account" required><br>
+         <label>club_id:</label><br>
+          <input type="number" name="club_id" required><br>
+        <button type="submit" name="create">CREATE</button>
+    </form>
+    
+    <!-- User List -->
+    <h2>update,delete,read of data</h2>
+     <form method="post" action="landingbank.php">
+                    <input type="number" name="bank_id" placeholder=" New bank_id">
+                    <input type="text" name="newbank_name" placeholder="New bank_name">
+                    <input type="text" name="newlocation" placeholder="New location">
+                    <input type="website" name="newwebsite" placeholder="New website">
+                    <input type="text" name="newcontact" placeholder="New contact">
+                    <input type="text" name="newbank_account" placeholder="New bank_account">
+                    <input type="text" name="newclub_id" placeholder="New club_id">
+                    <button type="submit" name="update">Update</button>
+                    <button type="submit" name="delete">Delete</button>
+                    <button type="submit" name="read">Read</button>
+                </form>
+</body>
+</html>

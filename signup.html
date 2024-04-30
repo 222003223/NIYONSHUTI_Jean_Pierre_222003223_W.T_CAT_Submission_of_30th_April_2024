@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---NIYONSHUTI Jean Pierre 222003223--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!----Add your CSS styles here --->
+      <link rel="stylesheet" href="css/style2.css">
+      <!---<script type="text/javascript" src="javascript/signupjs.js"></script>-->
+      <script type="text/javascript">
+        //declare Variables to be used
+        var divs = ["errorFirst", "errorLast","erroremail", "errorpassword", "errorcontact", "errormanager_id","errorusrname" ];
+
+        //Validation function
+        function validate() {
+            //just for input element
+            var inputs = [
+                document.getElementById('first_name').value,
+                document.getElementById('last_name').value,
+                document.getElementById('email').value,
+                document.getElementById('Password').value
+                document.getElementById('contact').value,
+                document.getElementById('manager_id').value,
+                document.getElementById('username').value
+                
+                
+            ];
+
+            //just for errors
+            var errors = [
+                "Please enter your First name!",
+                "Please enter your Last name!",
+                "Please enter your Email!",
+                "Please enter your Password!"
+                "Please enter your contact!",
+                "Please enter your manager_id!",
+                "Please enter your username!",
+                
+            ];
+
+            //we need to iterate through inputs
+            for (var i = 0; i < inputs.length; i++) {
+                var errorMessage = errors[i];
+                var div = divs[i];
+                if (inputs[i] == "") {
+                    document.getElementById(div).innerHTML = errorMessage;
+                } else {
+                    document.getElementById(div).innerHTML = "OK!";
+                }
+            }
+        }
+
+        function finalValidate() {
+            var count = 1;
+            for (var i = 1; i < 7; i++) {
+                var div = divs[i];
+                if (document.getElementById(div).innerHTML == "OK!") {
+                    count++;
+                }
+            }
+            if (count == 7) {
+                document.getElementById("errorfinal").innerHTML = "All the data you entered are correct!";
+            }
+        }
+    </script>
+</head>
+<body>
+<header style="font: Arial Rounded  MT Bold; font-size: 22;">
+    <div style="display: flex; align-items: center;">
+    <div>  <img src="./image/pierre.jpeg" width="100" height="75" alt="Logo">
+        <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+    </div></div>
+    <hr>
+<main style="color:grey;">
+    <center>
+ <section">
+     <form action="signup.php" method="post">
+         <h1>User Admin information</h1>
+    <table style="font-size: 22;">
+    
+       <tr><td> <label for="last_name">Last name:</label></td>
+        <td><input type="text" id="last_name" name="last_name" required></td></tr>
+       <tr><td> <label  for="first_name">First_name:</label><br>
+        <td><input type="text" id="first_name" name="first_name" required></td></tr>
+        <tr><td><label for="email">Email:</label><br>
+        <td><input type="email" id="email" name="email" required></td></tr>
+        <tr><td><label for="password">Password:</label><br>
+        <td><input type="password" id="password" name="password" required></td></tr>
+        <tr><td><label for="contact">Contact:</label><br>
+       <td> <input type="tel" id="contact" name="contact" required></td></tr>
+        <tr><td><label for="Manager_id">Manager_id:</label><br>
+        <td><input type="number" id="Manager_id" name="Manager_id" required></td></tr>
+        <tr><td><label for="username">Username:</label><br>
+        <td><input type="text" id="username" name="username" required></td></tr>
+         <tr><td>
+        <td><input type="submit" value="Sign Up"></td></tr>
+        </table>
+    </form></section></center></main>
+</hr>
+</body>
+</html>

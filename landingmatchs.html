@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---NIYONSHUTI Jean Pierre 222003223--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!----Add your CSS styles here --->
+      <link rel="stylesheet" href="css/style2.css">
+          <script type="text/javascript" src="javascript/updatejs.js"></script>
+    <script type="text/javascript" src="javascript/deletejs.js"></script>
+    <script type="text/javascript" src="javascript/readjs.js"></script>
+    <script type="text/javascript" src="javascript/insertjs.js"></script>
+</head>
+<body>
+<header style="font: Arial Rounded  MT Bold; font-size: 22;">
+    <div style="display: flex; align-items: center;">
+    <div>  <img src="./image/pierre.jpeg" width="100" height="75" alt="Logo">
+        <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+    </div></div>
+    <hr>
+<main style="color:grey;">
+    <center>
+ <section">
+     <form action="signup.php" method="post">
+         <h1> ADD NEW MATCHES</h1>
+    <form method="post" action="landingmatch.php">
+        <label for="match_id">Match_id:</label>
+        <input type="number" id="match_id" name="match_id"><br>
+        <label for="match_date">Match_date:</label>
+        <input type="date" id="match_date" name="match_date" required><br>
+        <label for="home_club">Home_club:</label>
+        <input type="home_club" id="home_club" name="home_club" required><br>
+        <label for="away_club">Away_club:</label>
+        <input type="text" id="away_club" name="away_club" required><br>
+        <label for="referee_names">Referee_names:</label>
+        <input type="text" id="referee_names" name="referee_names" required><br>
+        <button type="submit" name="create">CREATE</button>
+    </form>
+    
+      </section></center></main>
+    <!-- User List -->
+    <h2>Update,Delete and Read of data</h2>
+     <form method="post" action="landingmatch.php">
+                    <input type="number" name="match_id" placeholder=" New match_id"><br>
+                    <input type="date" name="newmatch_date" placeholder="New match_date"><br>
+                    <input type="text" name="newhome_club" placeholder="New home_club"><br>
+                    <input type="text" name="newaway_club" placeholder="New away_club "><br>
+                    <input type="text" name="newreferee_names" placeholder="New referee_names"><br>
+                    <button type="submit" name="update">UPDATE</button>
+                    <button type="submit" name="delete">DELETE</button>
+                    <button type="submit" name="read">READ</button>
+                </form>
+</body>
+</html>
